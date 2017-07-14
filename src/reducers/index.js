@@ -14,8 +14,6 @@ const createReducer = function(initialState, actions) {
     }
 }
 
-const rootReducer = combineReducers({
+export const appReducer = combineReducers({
     example: createReducer(example.initialState, example.actions)
 })
-
-export default rootReducer;

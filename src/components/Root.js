@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Provider } from "react-redux"
 import { appStore } from "../store"
-import App from '../containers/App'
+import App from './App'
 
 class Root extends Component {
     render() {

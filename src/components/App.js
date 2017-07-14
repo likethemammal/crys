@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Example from './Example.js'
 
-export default class App extends Component {
+import connect from './App.connect'
+
+class App extends Component {
 
     onButtonClick = () => {
         const { changeAction, on } = this.props
@@ -18,3 +20,5 @@ export default class App extends Component {
         </div>
     }
 }
+
+export default connect(App)
