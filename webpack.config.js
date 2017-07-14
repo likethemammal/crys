@@ -41,9 +41,17 @@ const config = {
                     'style-loader',
                     {
                         loader: 'css-loader',
-                        options: { modules: true },
+                        options: {
+                            modules: true,
+                            localIdentName: '[name].[local]'
+                        },
                     },
                 ],
+            },
+            {
+                test: /\.js$/,
+                use: ["source-map-loader"],
+                enforce: "pre"
             },
         ]
 
