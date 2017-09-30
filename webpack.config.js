@@ -31,9 +31,10 @@ const config = {
             {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
-                use: [{
-                    loader: 'babel-loader',
-                }],
+                use: [
+                    'babel-loader',
+                    'source-map-loader',
+                ],
             },
             {
                 test: /\.css$/,
@@ -43,15 +44,36 @@ const config = {
                         loader: 'css-loader',
                         options: {
                             modules: true,
-                            localIdentName: '[name].[local]'
+                            localIdentName: '[name].[local]',
+                            importLoaders: 1,
                         },
                     },
+                ],
+            },
+            {
+                test: /\.less/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            localIdentName: '[name].[local]',
+                            importLoaders: 1,
+                        },
+                    },
+                    'less-loader',
                 ],
             },
             {
                 test: /\.js$/,
                 use: ["source-map-loader"],
                 enforce: "pre"
+            },
+            {
+                test: /\.json$/,
+                use: ["json-loader"],
+                exclude: /(node_modules)/,
             },
         ]
 

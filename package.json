@@ -1,6 +1,6 @@
 {
   "name": "react-redux-webpack-example",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Boilerplate Webpack 2, Babel, React, Redux, Babel-Node, Nodemon",
   "dependencies": {
     "lodash": "^4.17.4",
@@ -10,7 +10,8 @@
     "redux": "^3.6.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
-    "reselect": "^3.0.1"
+    "reselect": "^3.0.1",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
@@ -19,6 +20,8 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
+    "less": "^2.7.2",
+    "less-loader": "^4.0.5",
     "file-loader": "^0.11.1",
     "redux-devtools-extension": "^2.13.2",
     "source-map-loader": "^0.2.1",
