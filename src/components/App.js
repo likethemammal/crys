@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-import Example from './Example.js'
 
 import connect from './App.connect'
+
+import Example from './Example'
+import SVG from './SVG'
+
+import PLAY_SVG from '../assets/icons/play_arrow.svg'
 
 class App extends Component {
 
@@ -16,6 +20,7 @@ class App extends Component {
 
         return <div>
             <div onClick={this.onButtonClick}>Click Me!</div>
+            <SVG raw={PLAY_SVG} />
             {on && <Example/>}
         </div>
     }
