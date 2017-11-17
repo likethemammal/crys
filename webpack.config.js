@@ -2,8 +2,12 @@ import webpack from 'webpack'
 
 import path from 'path'
 
-const plugins = [
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 
+const plugins = [
+    new CopyWebpackPlugin([
+        { from: 'assets' }
+    ])
 ]
 
 const config = {
@@ -75,6 +79,11 @@ const config = {
                 use: ["json-loader"],
                 exclude: /(node_modules)/,
             },
+            {
+                test: /\.(svg)$/,
+                use: ['raw-loader'],
+                exclude: /(node_modules)/,
+            }
         ]
 
     },
