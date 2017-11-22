@@ -1,0 +1,1 @@
+Check out the npm scripts to see what commands to run
