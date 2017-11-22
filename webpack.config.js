@@ -1,4 +1,5 @@
-import webpack from 'webpack'
+import autoprefixer from 'autoprefixer'
+import pixrem from 'pixrem'
 
 import path from 'path'
 
@@ -9,6 +10,29 @@ const plugins = [
         { from: 'assets' }
     ])
 ]
+
+const css_loader = {
+    loader: 'css-loader',
+    options: {
+        modules: true,
+        localIdentName: '[name].[local]',
+        importLoaders: 1,
+    },
+}
+
+const postcss_loader = {
+    loader: 'postcss-loader',
+    options: {
+        plugins: function () {
+            return [
+                autoprefixer('last 10 versions', 'ie 10'),
+                pixrem({
+                    rootValue: 10,
+                }),
+            ]
+        }
+    }
+}
 
 const config = {
 
@@ -44,28 +68,16 @@ const config = {
                 test: /\.css$/,
                 use: [
                     'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            localIdentName: '[name].[local]',
-                            importLoaders: 1,
-                        },
-                    },
+                    css_loader,
+                    postcss_loader,
                 ],
             },
             {
                 test: /\.less/,
                 use: [
                     'style-loader',
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            localIdentName: '[name].[local]',
-                            importLoaders: 1,
-                        },
-                    },
+                    css_loader,
+                    postcss_loader,
                     'less-loader',
                 ],
             },
