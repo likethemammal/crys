@@ -1,9 +1,10 @@
-import autoprefixer from 'autoprefixer'
-import pixrem from 'pixrem'
 
-import path from 'path'
+const autoprefixer = require('autoprefixer')
+const pixrem = require('pixrem')
 
-import CopyWebpackPlugin from 'copy-webpack-plugin'
+const path = require('path')
+
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const plugins = [
     new CopyWebpackPlugin([
@@ -52,7 +53,8 @@ const config = {
         contentBase: path.resolve(__dirname, './src'),
     },
     
-    devtool: 'source-map',
+    devtool: 'inline-source-map',
+    watch: true,
 
     module: {
         rules: [

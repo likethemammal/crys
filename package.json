@@ -1,8 +1,9 @@
 {
   "name": "react-redux-webpack-example",
   "version": "0.0.3",
-  "description": "Boilerplate Webpack 2, Babel, React, Redux, Babel-Node, Nodemon... *cough* Less",
+  "description": "Boilerplate Webpack 2, Babel, React, Redux, *cough* Less",
   "dependencies": {
+    "@likethemammal/general-components": "^0.1.15",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
@@ -31,14 +32,11 @@
     "redux-devtools-extension": "^2.13.2",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.18.2",
-    "webpack": "^2.6.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack": "3.9.1",
+    "webpack-dev-server": "2.10.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm i -g webpack webpack-dev-server@2 nodemon",
-    "dev": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "dev-on-server": "nodemon ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --exec babel-node"
+    "dev": "webpack-dev-server"
   },
   "author": "Chris Dolphin",
   "license": "ISC"

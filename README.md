@@ -1,1 +1,1 @@
-Check out the npm scripts to see what commands to run
+Example of a react-redux-es6-less-webpack codebase.

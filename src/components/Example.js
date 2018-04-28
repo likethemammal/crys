@@ -12,6 +12,7 @@ export default class Example extends Component {
         const { className } = this.props
 
         return <div className={className}>
+            I'm here cus you clicked!
         </div>
     }
 }

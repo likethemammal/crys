@@ -3,7 +3,10 @@ import React, { Component } from 'react'
 import connect from './App.connect'
 
 import Example from './Example'
-import SVG from './SVG'
+
+import general from '@likethemammal/general-components'
+
+const { SVG } = general.components
 
 import PLAY_SVG from '../assets/icons/play_arrow.svg'
 
@@ -20,7 +23,8 @@ class App extends Component {
 
         return <div>
             <div onClick={this.onButtonClick}>Click Me!</div>
-            <SVG raw={PLAY_SVG} />
+
+            <SVG style={{display: 'none'}} raw={PLAY_SVG} />
             {on && <Example/>}
         </div>
     }

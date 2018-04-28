@@ -1,5 +1,7 @@
 import { appReducer } from '../reducers'
-import configureStore from "./configure"
+import general_components from "@likethemammal/general-components"
+
+const configureStore = general_components.store.configure
 
 //used in devtools
 const STORE_NAME_App = 'App'
